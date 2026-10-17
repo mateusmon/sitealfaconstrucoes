@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#070708" />
+    <meta name="description" content="ALFA Construções: soluções em blocos estruturais, obras residenciais e comerciais com atenção a cada detalhe." />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; style-src-attr 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; form-action 'self'" />
+    <title>ALFA Construções — Solidez em cada etapa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="vendor/lenis-1.3.27.css" />
+    <link rel="stylesheet" href="dna-style.css" />
+    <link rel="stylesheet" href="motion.css" />
+    <link rel="stylesheet" href="hero-art.css" />
+    <link rel="stylesheet" href="quote.css" />
+    <script src="liquid-engine.js" defer></script>
+    <script src="liquid-sculpture.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="vendor/lenis-1.3.27.min.js" defer></script>
+    <script src="motion.js" defer></script>
+    <script src="gallery.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <canvas class="particle-field" id="particle-field" aria-hidden="true"></canvas>
+
+    <!-- Navegação principal -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#inicio" aria-label="ALFA Construções, voltar ao início">
+          <svg class="brand-mark" viewBox="0 0 54 42" aria-hidden="true"><path d="M2 20 27 2l25 18"/><path d="M10 18v21h34V18"/><path d="M23 39V26h8v13"/></svg>
+          <span class="brand-type"><strong>ALFA</strong><span>CONSTRUÇÕES</span></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <a href="#sobre">Sobre</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#projetos">Projetos</a>
+          <a class="button button-small" href="#orcamento">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo" tabindex="-1">
+      <!-- Abertura editorial inspirada no DNA de design, com partículas procedurais à direita. -->
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <picture class="hero-sculpture" aria-hidden="true">
+          <source media="(max-width: 600px)" srcset="assets/hero-escultura-mobile.webp" />
+          <img src="assets/hero-escultura-desktop.webp" alt="" width="1983" height="793" fetchpriority="high" decoding="async" />
+        </picture>
+        <div class="hero-orbit" aria-hidden="true">
+          <svg class="hero-orbit-track"><path /></svg>
+          <span class="hero-orbit-dot"></span>
+        </div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow eyebrow-light">ALFA CONSTRUÇÕES <span class="eyebrow-separator">/</span> DO PROJETO AO SONHO</p>
+            <h1 id="hero-title">Toda grande obra começa por uma base <em>sólida.</em></h1>
+            <p class="hero-description">Blocos estruturais, obras residenciais e comerciais executados com método, cuidado e compromisso em cada etapa.</p>
+            <div class="hero-actions">
+              <a class="button" href="#contato">Converse sobre seu projeto <span aria-hidden="true">↗</span></a>
+              <a class="text-link text-link-light" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="hero-bottom">
+            <a class="scroll-prompt" href="#sobre">ROLE PARA EXPLORAR <span aria-hidden="true"></span></a>
+            <p>ESTRUTURA <span>/</span> PRECISÃO <span>/</span> CONFIANÇA</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Apresentação institucional -->
+      <section class="section about" id="sobre" aria-labelledby="sobre-title">
+        <div class="container about-grid">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> Sobre a ALFA</p>
+            <h2 id="sobre-title" class="section-title">Solidez que se vê.<br /><span>Compromisso que se sente.</span></h2>
+          </div>
+          <div class="about-content">
+            <p class="lead">Construir é transformar uma ideia em um espaço para viver, trabalhar e crescer.</p>
+            <p>Na ALFA Construções, o cuidado começa na base. Unimos planejamento, mão de obra qualificada e atenção aos materiais para executar cada etapa com clareza e responsabilidade.</p>
+            <div class="value-grid" aria-label="Nossos compromissos">
+              <div><span class="value-number">01</span><strong>Transparência</strong><small>Diálogo claro em cada fase.</small></div>
+              <div><span class="value-number">02</span><strong>Qualidade</strong><small>Precisão do início ao acabamento.</small></div>
+              <div><span class="value-number">03</span><strong>Compromisso</strong><small>Respeito ao projeto e ao prazo.</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Serviços em blocos estruturais e construção -->
+      <section class="section services" id="servicos" aria-labelledby="servicos-title">
+        <div class="container">
+          <div class="section-heading section-heading-dark">
+            <div><p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> O que fazemos</p><h2 id="servicos-title" class="section-title">Estruturas para<br /><span>cada necessidade.</span></h2></div>
+            <p>Da execução de alvenaria estrutural a obras completas, oferecemos soluções com método, segurança e acabamento cuidadoso.</p>
+          </div>
+          <!-- Serviços em fluxo vertical, sem fotos nem carrossel. -->
+          <div class="services-story">
+          <div class="services-grid">
+            <article class="service-card"><div class="service-top"><span>01 / 04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 41V19L24 6l18 13v22H6Z"/><path d="M18 41V27h12v14M6 20h36"/></svg></div><div><h3>Construção residencial</h3><p>Projetos executados com atenção à segurança, funcionalidade e aos detalhes que fazem uma casa durar.</p></div></article>
+            <article class="service-card"><div class="service-top"><span>02 / 04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 42V10h32v32M4 42h40M17 10V4h14v6M16 19h5m6 0h5m-16 9h5m6 0h5m-16 9h5m6 0h5"/></svg></div><div><h3>Obras comerciais</h3><p>Espaços preparados para operar bem, com soluções de construção alinhadas à rotina do negócio.</p></div></article>
+            <article class="service-card"><div class="service-top"><span>03 / 04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 43h38M8 43V13h32v30M8 23h32M8 33h32M21 13v10m13 0v10M15 33v10m16-10v10"/></svg></div><div><h3>Blocos estruturais</h3><p>Muros, paredes e fechamentos com assentamento preciso e foco em resistência e estabilidade.</p></div></article>
+            <article class="service-card"><div class="service-top"><span>04 / 04</span><svg viewBox="0 0 48 48" aria-hidden="true"><path d="m8 39 9-9 8 8 15-15M30 23h10v10M7 8h34v32H7z"/></svg></div><div><h3>Reformas e melhorias</h3><p>Intervenções planejadas para renovar ambientes e valorizar a construção existente.</p></div></article>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fotografias fornecidas pelo cliente, agrupadas por tipo de execução. -->
+      <section class="section projects" id="projetos" aria-labelledby="projetos-title">
+        <div class="container">
+          <div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> Nosso trabalho</p><h2 id="projetos-title" class="section-title">Obras feitas para <span>permanecer.</span></h2></div><p>Da alvenaria ao acabamento, conheça os registros de execução que dão forma ao nosso trabalho.</p></div>
+          <div class="project-grid">
+            <figure class="project-card">
+              <a class="project-photo" href="assets/obras/obra-alfa-04.jpeg" data-photo data-caption="Residência em alvenaria aparente" aria-label="Ampliar foto da residência em alvenaria aparente" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-04.webp" type="image/webp" /><img src="assets/obras/obra-alfa-04.jpeg" alt="Fachada de residência com tijolos aparentes, pilares de concreto e varanda" loading="lazy" decoding="async" width="1600" height="1200" /></picture></a>
+              <figcaption><span>01 / Residencial</span><strong>Construção em alvenaria aparente</strong><span class="project-arrow" aria-hidden="true">↗</span></figcaption>
+            </figure>
+            <figure class="project-card">
+              <a class="project-photo" href="assets/obras/obra-alfa-01.jpeg" data-photo data-caption="Galpão com estrutura metálica e fechamento em blocos" aria-label="Ampliar vista geral do galpão" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-01.webp" type="image/webp" /><img src="assets/obras/obra-alfa-01.jpeg" alt="Galpão em construção com cobertura metálica e paredes de blocos de concreto" loading="lazy" decoding="async" width="1280" height="960" /></picture></a>
+              <figcaption><span>02 / Galpão</span><strong>Estrutura e fechamento em blocos</strong><span class="project-arrow" aria-hidden="true">↗</span></figcaption>
+              <div class="project-thumbnails" aria-label="Outras fotos do galpão"><a href="assets/obras/obra-alfa-02.jpeg" data-photo data-caption="Vista interna do galpão e piso de concreto" aria-label="Ampliar vista interna do galpão" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-02.webp" type="image/webp" /><img src="assets/obras/obra-alfa-02.jpeg" alt="Interior do galpão com piso de concreto e paredes em blocos" loading="lazy" decoding="async" width="1600" height="1200" /></picture></a></div>
+            </figure>
+            <figure class="project-card">
+              <a class="project-photo" href="assets/obras/obra-alfa-08.jpeg" data-photo data-caption="Muro de fechamento em blocos de concreto" aria-label="Ampliar foto do muro de fechamento" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-08.webp" type="image/webp" /><img src="assets/obras/obra-alfa-08.jpeg" alt="Muro de blocos de concreto com pilares ao longo do terreno" loading="lazy" decoding="async" width="1080" height="965" /></picture></a>
+              <figcaption><span>03 / Blocos estruturais</span><strong>Muros, paredes e fechamentos</strong><span class="project-arrow" aria-hidden="true">↗</span></figcaption>
+              <div class="project-thumbnails" aria-label="Etapas da alvenaria">
+                <a href="assets/obras/obra-alfa-06.jpeg" data-photo data-caption="Preparação dos blocos junto à base do muro" aria-label="Ampliar preparação dos blocos" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-06.webp" type="image/webp" /><img src="assets/obras/obra-alfa-06.jpeg" alt="Blocos organizados junto à fundação e às armaduras do muro" loading="lazy" decoding="async" width="1080" height="973" /></picture></a>
+                <a href="assets/obras/obra-alfa-07.jpeg" data-photo data-caption="Assentamento das primeiras fiadas do muro" aria-label="Ampliar assentamento das primeiras fiadas" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-07.webp" type="image/webp" /><img src="assets/obras/obra-alfa-07.jpeg" alt="Primeiras fiadas de blocos assentadas ao longo do terreno" loading="lazy" decoding="async" width="1080" height="965" /></picture></a>
+                <a href="assets/obras/obra-alfa-09.jpeg" data-photo data-caption="Execução dos pilares e do fechamento em blocos" aria-label="Ampliar execução do fechamento em blocos" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-09.webp" type="image/webp" /><img src="assets/obras/obra-alfa-09.jpeg" alt="Vista em perspectiva do muro com pilares e alvenaria em execução" loading="lazy" decoding="async" width="1080" height="1072" /></picture></a>
+                <a href="assets/obras/obra-alfa-10.jpeg" data-photo data-caption="Alinhamento da alvenaria em execução" aria-label="Ampliar alinhamento da alvenaria" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-10.webp" type="image/webp" /><img src="assets/obras/obra-alfa-10.jpeg" alt="Parede de blocos em construção com materiais dispostos ao lado" loading="lazy" decoding="async" width="1066" height="987" /></picture></a>
+                <a href="assets/obras/obra-alfa-11.jpeg" data-photo data-caption="Detalhe dos blocos e das armaduras verticais" aria-label="Ampliar detalhe dos blocos e armaduras" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-11.webp" type="image/webp" /><img src="assets/obras/obra-alfa-11.jpeg" alt="Detalhe de blocos de concreto com armaduras verticais junto à base do muro" loading="lazy" decoding="async" width="911" height="1067" /></picture></a>
+              </div>
+            </figure>
+            <figure class="project-card">
+              <a class="project-photo" href="assets/obras/obra-alfa-05.jpeg" data-photo data-caption="Varanda com piso cerâmico e alvenaria aparente" aria-label="Ampliar foto da varanda e dos acabamentos" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-05.webp" type="image/webp" /><img src="assets/obras/obra-alfa-05.jpeg" alt="Varanda com revestimento cerâmico no piso e paredes de tijolos aparentes" loading="lazy" decoding="async" width="1280" height="960" /></picture></a>
+              <figcaption><span>04 / Acabamentos</span><strong>Cuidado nos detalhes de cada ambiente</strong><span class="project-arrow" aria-hidden="true">↗</span></figcaption>
+              <div class="project-thumbnails" aria-label="Outras fotos dos acabamentos"><a href="assets/obras/obra-alfa-03.jpeg" data-photo data-caption="Revestimento cerâmico no piso e nas paredes" aria-label="Ampliar detalhe do revestimento cerâmico" target="_blank" rel="noopener"><picture><source srcset="assets/obras/obra-alfa-03.webp" type="image/webp" /><img src="assets/obras/obra-alfa-03.jpeg" alt="Ambiente com revestimento cerâmico claro no piso e nas paredes" loading="lazy" decoding="async" width="960" height="1280" /></picture></a></div>
+            </figure>
+          </div>
+          <p class="image-note">11 registros de obra. Selecione uma foto para ver em tamanho completo.</p>
+        </div>
+      </section>
+
+      <!-- Orçamento: fluxo em três etapas, inspirado no formulário da Gama Galvão. -->
+      <section class="section quote-section" id="contato" aria-labelledby="contato-title">
+        <div class="container quote-grid">
+          <div class="quote-main" id="orcamento">
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> Seu próximo projeto</p>
+            <h2 id="contato-title" class="section-title">Vamos tirar sua obra <span>do papel?</span></h2>
+            <p class="quote-lead">Escolha o serviço, conte sobre a obra e revise o pedido antes de falar com a ALFA.</p>
+            <ol class="quote-steps" aria-label="Etapas do orçamento">
+              <li class="is-current" aria-current="step"><span>01</span> Serviço</li>
+              <li><span>02</span> Obra e contato</li>
+              <li><span>03</span> Revisão</li>
+            </ol>
+            <form id="contact-form" class="quote-form" novalidate>
+              <section class="quote-panel" data-quote-step="0" aria-labelledby="quote-step-title-0">
+                <h3 id="quote-step-title-0" tabindex="-1">Qual serviço sua obra precisa?</h3>
+                <fieldset class="quote-options"><legend class="sr-only">Escolha um serviço</legend>
+                  <label class="quote-option"><input type="radio" name="servico" value="Construção residencial" /><span><strong>Construção residencial</strong><small>Uma casa planejada com cuidado em cada etapa.</small></span><span class="quote-check" aria-hidden="true">✓</span></label>
+                  <label class="quote-option"><input type="radio" name="servico" value="Obra comercial" /><span><strong>Obra comercial</strong><small>Estruturas funcionais para o seu negócio.</small></span><span class="quote-check" aria-hidden="true">✓</span></label>
+                  <label class="quote-option"><input type="radio" name="servico" value="Blocos estruturais" /><span><strong>Blocos estruturais</strong><small>Muros, paredes e fechamentos resistentes.</small></span><span class="quote-check" aria-hidden="true">✓</span></label>
+                  <label class="quote-option"><input type="radio" name="servico" value="Reformas e melhorias" /><span><strong>Reformas e melhorias</strong><small>Renovação planejada para valorizar o espaço.</small></span><span class="quote-check" aria-hidden="true">✓</span></label>
+                </fieldset>
+                <p class="field-error" data-error="servico" role="alert" hidden>Escolha o serviço que sua obra precisa.</p>
+                <div class="quote-actions"><span class="quote-step-count">Etapa 1 de 3</span><button class="button form-submit" type="submit" data-quote-next>Continuar <span aria-hidden="true">→</span></button></div>
+              </section>
+              <section class="quote-panel" data-quote-step="1" aria-labelledby="quote-step-title-1" hidden>
+                <h3 id="quote-step-title-1" tabindex="-1">Conte um pouco sobre o projeto.</h3>
+                <p class="quote-required">Nome, e-mail, local, etapa e descrição são obrigatórios.</p>
+                <div class="quote-fields">
+                  <div class="quote-field"><label for="nome">Seu nome</label><input id="nome" name="nome" autocomplete="name" required placeholder="Como podemos chamar você?" /><small class="field-error" data-error="nome" role="alert" hidden></small></div>
+                  <div class="quote-field"><label for="email">E-mail para retorno</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="voce@exemplo.com.br" /><small class="field-error" data-error="email" role="alert" hidden></small></div>
+                  <div class="quote-field"><label for="telefone">Telefone <span>(opcional)</span></label><input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" /></div>
+                  <div class="quote-field"><label for="local">Local da obra</label><input id="local" name="local" required placeholder="Cidade / UF" /><small class="field-error" data-error="local" role="alert" hidden></small></div>
+                  <div class="quote-field"><label for="etapa">Etapa atual</label><select id="etapa" name="etapa" required><option value="">Selecione uma etapa</option><option>Planejamento</option><option>Projeto em desenvolvimento</option><option>Pronta para iniciar</option><option>Obra em andamento</option><option>Reforma ou melhoria</option></select><small class="field-error" data-error="etapa" role="alert" hidden></small></div>
+                  <div class="quote-field"><label for="previsao">Previsão de início <span>(opcional)</span></label><select id="previsao" name="previsao"><option value="">A combinar</option><option>Assim que possível</option><option>Nos próximos 3 meses</option><option>Entre 3 e 6 meses</option><option>Mais de 6 meses</option></select></div>
+                </div>
+                <div class="quote-field"><label for="mensagem">O que você precisa executar?</label><textarea id="mensagem" name="mensagem" rows="4" maxlength="2000" required placeholder="Conte o escopo, a área aproximada e o que já está definido."></textarea><small class="field-error" data-error="mensagem" role="alert" hidden></small></div>
+                <div class="quote-actions"><button class="button button-outline" type="button" data-quote-back>← Voltar</button><button class="button form-submit" type="submit" data-quote-next>Revisar pedido <span aria-hidden="true">→</span></button></div>
+              </section>
+              <section class="quote-panel" data-quote-step="2" aria-labelledby="quote-step-title-2" hidden>
+                <h3 id="quote-step-title-2" tabindex="-1">Seu pedido está pronto para revisar.</h3>
+                <p class="quote-review-note">Confira os dados. O WhatsApp será aberto com a mensagem preenchida para você enviar à equipe ALFA.</p>
+                <dl class="quote-recap" id="quote-recap"></dl>
+                <div class="quote-description"><span>Descrição da obra</span><p id="quote-message-review"></p></div>
+                <pre class="quote-copy-text" id="quote-copy-text" tabindex="0" aria-label="Resumo do pedido para copiar"></pre>
+                <div class="quote-send-actions"><button class="button button-outline" type="button" data-quote-back>← Editar dados</button><a class="button form-submit" id="send-whatsapp" href="https://wa.me/556481188459" target="_blank" rel="noopener noreferrer">Enviar pelo WhatsApp <span aria-hidden="true">↗</span></a></div>
+                <button class="quote-copy" id="copy-summary" type="button">Copiar resumo</button>
+                <p class="quote-status" id="copy-feedback" role="status" aria-live="polite"></p>
+              </section>
+            </form>
+          </div>
+          <aside class="quote-side" aria-label="Resumo do pedido de orçamento">
+            <div class="quote-side-brand"><span class="quote-brand-mark" aria-hidden="true">A</span><div><strong>ALFA Construções</strong><span>Do projeto ao sonho.</span></div></div>
+            <p class="quote-side-label">Seu projeto começa aqui</p>
+            <dl class="quote-summary"><div><dt>Serviço</dt><dd id="summary-servico">A escolher</dd></div><div><dt>Local da obra</dt><dd id="summary-local">A informar</dd></div><div><dt>Etapa</dt><dd id="summary-etapa">A informar</dd></div><div><dt>Previsão de início</dt><dd id="summary-previsao">A combinar</dd></div></dl>
+            <div class="quote-side-help"><span>Prefere falar com a equipe?</span><a href="https://wa.me/556481188459" target="_blank" rel="noopener noreferrer">WhatsApp <strong>+55 64 8118-8459</strong> ↗</a><p>Seu pedido pode seguir com a mensagem preenchida na última etapa.</p></div>
+            <span class="quote-side-footer">Construção · Blocos estruturais · Reformas</span>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <!-- Ampliação nativa: Escape fecha e o foco retorna à foto selecionada. -->
+    <dialog class="photo-dialog" id="photo-dialog" aria-labelledby="photo-dialog-caption">
+      <div class="photo-dialog-toolbar"><span id="photo-dialog-counter" aria-live="polite"></span><button type="button" class="photo-dialog-close" autofocus aria-label="Fechar foto ampliada">Fechar <span aria-hidden="true">×</span></button></div>
+      <figure><img id="photo-dialog-image" alt="" /><figcaption id="photo-dialog-caption"></figcaption></figure>
+      <div class="photo-dialog-navigation"><button type="button" data-photo-previous aria-label="Foto anterior">← Anterior</button><button type="button" data-photo-next aria-label="Próxima foto">Próxima →</button></div>
+    </dialog>
+
+    <!-- Rodapé -->
+    <footer class="site-footer"><div class="container footer-inner"><div class="footer-brand"><span class="footer-logo">ALFA<span> / </span>CONSTRUÇÕES</span><p>Do projeto ao sonho, construímos com você.</p></div><div class="footer-links"><a href="#inicio">Voltar ao topo ↑</a><span>© <span id="year">2026</span> ALFA Construções</span></div></div></footer>
+  </body>
+</html>

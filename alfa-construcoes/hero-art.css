@@ -1,0 +1,88 @@
+/* Escultura do hero ao lado do título, com tratamento escuro da identidade ALFA. */
+.hero {
+  isolation: isolate;
+  --hero-base: #191919;
+  --hero-base-rgb: 25, 25, 25;
+  background-color: var(--hero-base);
+}
+
+.hero::before {
+  z-index: 0;
+  background: linear-gradient(90deg, var(--hero-base) 0%, rgba(var(--hero-base-rgb), .98) 34%, rgba(var(--hero-base-rgb), .78) 55%, rgba(var(--hero-base-rgb), .18) 100%);
+}
+
+.hero-sculpture {
+  position: absolute;
+  z-index: 1;
+  top: 49%;
+  right: -2%;
+  width: min(48vw, 760px);
+  transform: translateY(-50%);
+  opacity: .9;
+  mix-blend-mode: screen;
+  mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 92%, transparent 100%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-sculpture img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-liquid-canvas {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .45s ease;
+  pointer-events: none;
+}
+
+.hero[data-gl="on"] .hero-liquid-canvas {
+  opacity: 1;
+}
+
+.hero[data-gl="on"] .hero-sculpture {
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.hero-orbit {
+  z-index: 3;
+}
+
+.hero-inner {
+  z-index: 4;
+}
+
+@media (max-width: 850px) {
+  .hero-sculpture {
+    right: -9%;
+    width: min(65vw, 620px);
+    opacity: .95;
+  }
+
+  .hero::before {
+    background: linear-gradient(90deg, var(--hero-base) 0%, rgba(var(--hero-base-rgb), .9) 46%, rgba(var(--hero-base-rgb), .35) 100%);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-sculpture {
+    top: 34%;
+    right: -19%;
+    width: 91vw;
+    opacity: .85;
+    mask-image: linear-gradient(90deg, transparent 0%, #000 22%, #000 100%);
+  }
+
+  .hero::before {
+    background: linear-gradient(90deg, rgba(var(--hero-base-rgb), .97) 0%, rgba(var(--hero-base-rgb), .86) 58%, rgba(var(--hero-base-rgb), .5) 100%);
+  }
+}

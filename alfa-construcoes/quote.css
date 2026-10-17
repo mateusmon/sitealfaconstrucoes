@@ -1,0 +1,82 @@
+/* Orçamento em etapas no padrão de fluxo da Gama Galvão, adaptado à identidade ALFA. */
+.quote-section { scroll-margin-top: calc(var(--header-h) + 16px); }
+.quote-main#orcamento { scroll-margin-top: calc(var(--header-h) + 28px); }
+.quote-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(290px, .8fr); gap: clamp(42px, 7vw, 100px); align-items: start; }
+.quote-main > .section-title { max-width: 760px; font-size: clamp(3.5rem, 6vw, 6rem); }
+.quote-main > .section-title span { color: var(--yellow); }
+.quote-lead { max-width: 590px; margin: 24px 0 0; color: var(--muted-strong); font-size: .9rem; line-height: 1.75; }
+.quote-steps { display: flex; gap: 14px; list-style: none; margin: 42px 0 32px; padding: 0; }
+.quote-steps li { flex: 1; display: flex; align-items: center; gap: 9px; padding-top: 12px; border-top: 2px solid var(--line); color: var(--muted); font-size: .72rem; transition: border-color .2s, color .2s; }
+.quote-steps li > span { color: var(--yellow); font-size: .64rem; font-weight: 600; letter-spacing: .12em; }
+.quote-steps li.is-current { border-color: var(--yellow); color: var(--white); }
+.quote-steps li[aria-current="step"] { font-weight: 600; }
+.quote-panel[hidden] { display: none; }
+.quote-panel [hidden] { display: none !important; }
+.quote-panel h3 { margin: 0 0 22px; font-family: var(--font-display); font-size: clamp(1.8rem, 2.6vw, 2.5rem); font-weight: 300; line-height: 1.1; }
+.quote-panel h3:focus { outline: 2px solid var(--yellow); outline-offset: 6px; }
+.quote-options { display: grid; gap: 10px; margin: 0; padding: 0; border: 0; }
+.quote-option { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 82px; padding: 16px 18px; border: 1px solid var(--line); background: rgba(255,255,255,.025); cursor: pointer; transition: border-color .2s, background .2s; }
+.quote-option:hover, .quote-option:has(input:checked) { border-color: var(--yellow); background: rgba(244,196,48,.07); }
+.quote-option input { flex: 0 0 18px; width: 18px; height: 18px; margin: 0; accent-color: var(--yellow); }
+.quote-option input:focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+.quote-option strong, .quote-option small { display: block; }
+.quote-option strong { font-size: .88rem; font-weight: 500; }
+.quote-option small { margin-top: 5px; color: var(--muted); font-size: .74rem; line-height: 1.45; }
+.quote-check { flex: 0 0 22px; color: transparent; font-size: 1rem; }
+.quote-option:has(input:checked) .quote-check { color: var(--yellow); }
+.quote-required, .quote-step-count { color: var(--muted); font-size: .72rem; }
+.quote-required { margin: -8px 0 21px; }
+.quote-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 26px; }
+.quote-actions .form-submit { width: auto; min-width: 175px; margin: 0; }
+.quote-actions .button-outline { min-height: 48px; padding: 12px 16px; border: 1px solid var(--line); background: transparent; color: var(--white); font-size: .72rem; }
+.quote-actions .button-outline:hover { border-color: var(--yellow); color: var(--yellow); background: transparent; }
+.quote-fields { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 0 18px; }
+.quote-field { display: grid; gap: 7px; margin-bottom: 18px; }
+.quote-field label { font-size: .74rem; font-weight: 500; }
+.quote-field label span { color: var(--muted); font-weight: 300; }
+.quote-field input, .quote-field select, .quote-field textarea { width: 100%; min-height: 49px; padding: 12px 13px; border: 1px solid rgba(255,255,255,.28); border-radius: 0; background: rgba(255,255,255,.035); color: var(--white); font-size: .8rem; }
+.quote-field select { color-scheme: dark; }
+.quote-field select option { color: #070708; background-color: #ffffff; }
+.quote-field textarea { min-height: 116px; resize: vertical; }
+.quote-field input::placeholder, .quote-field textarea::placeholder { color: #aaaab0; }
+.quote-field input:focus, .quote-field select:focus, .quote-field textarea:focus { border-color: var(--yellow); outline: 2px solid var(--yellow); outline-offset: 2px; }
+.quote-field [aria-invalid="true"], .quote-options[aria-invalid="true"] .quote-option { border-color: var(--yellow); }
+.quote-field .field-error, .quote-panel > .field-error { margin: 0; color: #ffdc79; font-size: .72rem; }
+.quote-review-note { margin: -8px 0 20px; color: var(--muted-strong); font-size: .8rem; line-height: 1.65; }
+.quote-recap { margin: 0; border-top: 1px solid var(--line); }
+.quote-recap > div { display: grid; grid-template-columns: minmax(110px,.65fr) minmax(0,1fr); gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: .78rem; }
+.quote-recap dt { color: var(--muted); }
+.quote-recap dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.quote-description { padding: 20px 0 10px; }
+.quote-description > span { color: var(--muted); font-size: .72rem; }
+.quote-description > p { margin: 6px 0 0; font-size: .82rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.quote-copy-text { max-height: 170px; overflow: auto; margin: 14px 0 0; padding: 14px; border: 1px solid var(--line); color: var(--muted-strong); font: 300 .7rem/1.6 var(--font-ui); white-space: pre-wrap; overflow-wrap: anywhere; }
+.quote-copy-text:focus { outline-color: var(--yellow); }
+.quote-status { min-height: 1.4em; margin: 12px 0 0; color: var(--yellow); font-size: .75rem; }
+.quote-send-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 24px; }
+.quote-send-actions .form-submit { min-width: 190px; }
+.quote-send-actions .button-outline { min-height: 48px; padding: 12px 16px; border: 1px solid var(--line); background: transparent; color: var(--white); font-size: .72rem; }
+.quote-send-actions .button-outline:hover { border-color: var(--yellow); color: var(--yellow); background: transparent; }
+.quote-copy { margin-top: 12px; padding: 8px 0; border: 0; background: transparent; color: var(--muted-strong); font-size: .74rem; text-decoration: underline; text-underline-offset: 3px; }
+.quote-copy:hover { color: var(--yellow); }
+.quote-side { position: sticky; top: calc(var(--header-h) + 25px); padding: clamp(24px, 3.2vw, 44px); border: 1px solid var(--line); color: var(--white); background: #111112; }
+.quote-side-brand { display: flex; align-items: center; gap: 14px; padding-bottom: 25px; border-bottom: 1px solid var(--line); }
+.quote-brand-mark { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--yellow); color: var(--yellow); font-family: var(--font-display); font-size: 2rem; }
+.quote-side-brand strong, .quote-side-brand span { display: block; }
+.quote-side-brand strong { font-size: .9rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; }
+.quote-side-brand span { margin-top: 4px; color: var(--muted); font-size: .72rem; }
+.quote-side-brand > .quote-brand-mark { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; margin: 0; color: var(--yellow); font-family: var(--font-display); font-size: 2rem; line-height: 1; }
+.quote-side-label { margin: 25px 0 14px; color: var(--yellow); font-size: .62rem; letter-spacing: .17em; text-transform: uppercase; }
+.quote-summary { margin: 0; border-top: 1px solid var(--line); }
+.quote-summary > div { display: flex; justify-content: space-between; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: .73rem; }
+.quote-summary dt { flex: 0 0 auto; color: var(--muted); }
+.quote-summary dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+.quote-side-help { display: grid; gap: 7px; margin-top: 24px; }
+.quote-side-help > span { font-size: .75rem; font-weight: 500; }
+.quote-side-help > a { color: var(--yellow); font-size: .79rem; }
+.quote-side-help > a strong { font-weight: 500; }
+.quote-side-help > p { margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.6; }
+.quote-side-footer { display: block; margin-top: 28px; padding-top: 15px; border-top: 1px solid var(--line); color: var(--yellow); font-size: .61rem; letter-spacing: .06em; }
+@media (max-width: 850px) { .quote-grid { grid-template-columns: 1fr; gap: 48px; } .quote-side { position: static; } }
+@media (max-width: 600px) { .quote-steps { gap: 8px; margin-top: 32px; } .quote-steps li { align-items: flex-start; flex-direction: column; gap: 5px; font-size: .65rem; } .quote-fields { grid-template-columns: 1fr; } .quote-actions { align-items: stretch; } .quote-actions .form-submit { min-width: 0; } .quote-send-actions { align-items: stretch; flex-direction: column-reverse; } .quote-send-actions .form-submit { min-width: 0; } .quote-side { padding: 23px; } }
+@media (prefers-reduced-motion: reduce) { .quote-steps li, .quote-option { transition: none; } }
